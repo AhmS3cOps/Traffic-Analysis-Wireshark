@@ -1,4 +1,3 @@
-Sure! Here's a cleaned-up, more professional and readable version of your write-up. I kept your structure and technical details intact while improving clarity, grammar, and formatting.
 
 ---
 
@@ -99,4 +98,3 @@ Following the TCP stream exposed the nature of the data RedLine was trying to st
 
 ---
 
-Let me know if you want this turned into a PDF report or a markdown file!
