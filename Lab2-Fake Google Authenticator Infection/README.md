@@ -48,7 +48,7 @@ I began by using **Wireshark’s Statistics → Endpoints feature**, which provi
 Immediately, one client stood out: **10.1.17.215**, responsible for **39,045 packets** — far more than any other system in the capture.  
 In incident response, unusually high packet counts are often a sign of malicious activity such as beaconing, downloads, or C2 communication.  
 
-![Infected Host IP](images/1.PNG)
+![Infected Host IP](images/1.png)
 
 ---
 
@@ -69,7 +69,7 @@ Inside the DHCP options field, the hostname was exposed as:
 
 This step confirmed that `10.1.17.215` was not only suspicious by traffic count, but also mapped to a real host on the LAN.  
 
-![Hostname](images/3.PNG)
+![Hostname](images/3.png)
 
 ---
 
@@ -81,7 +81,7 @@ By filtering for the infected IP alongside Kerberos traffic, I found the account
 
 This gave me a clear link between the infected traffic and a specific user identity within the environment.  
 
-![User Account](images/4.PNG)
+![User Account](images/4.png)
 
 ---
 
@@ -100,7 +100,7 @@ Two domains stood out:
 
 The second domain was particularly suspicious: **authenticatoor.org** contained a typo (double "o"), a common tactic in typosquatting campaigns.  
 
-![Fake Domain](images/5.PNG)
+![Fake Domain](images/5.png)
 
 ---
 
@@ -113,9 +113,9 @@ The domains resolved to multiple IPs, but deeper inspection via Wireshark’s **
 
 These IPs stood out not just because they resolved, but because of the **volume of active connections** tied to the infected machine.  
 
-![C2 DNS Response](images/6.PNG)  
-![C2 Resolution](images/7.PNG)  
-![C2 Endpoints](images/8.PNG)
+![C2 DNS Response](images/6.png)  
+![C2 Resolution](images/7.png)  
+![C2 Endpoints](images/8.png)
 
 ---
 
@@ -135,8 +135,8 @@ Two key findings emerged:
    - Began with `iex ((system.convert)::...` → executes decoded commands.  
    - Used `.replace()` → simple string obfuscation to hinder analysis.  
 
-![VBScript Payload](images/9.PNG)  
-![Obfuscated PowerShell](images/10.PNG)
+![VBScript Payload](images/9.png)  
+![Obfuscated PowerShell](images/10.png)
 
 ---
 
@@ -148,8 +148,8 @@ Finally, I cross-checked suspicious IPs against **VirusTotal**.
 
 This confirmed that the infrastructure I identified in the PCAP was indeed malicious.  
 
-![VirusTotal Check 1](images/VT1.PNG)  
-![VirusTotal Check 2](images/VT2.PNG)
+![VirusTotal Check 1](images/VT1.png)  
+![VirusTotal Check 2](images/VT2.png)
 
 ---
 
