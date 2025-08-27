@@ -57,7 +57,7 @@ Once the infected IP was isolated, I needed its **MAC address**. This is useful 
 
 I filtered Wireshark traffic for the infected IP and inspected the Ethernet header of a packet. From here, I correlated the **source MAC address** with the suspicious IP.  
 
-![MAC Address](images/2.PNG)
+![MAC Address](images/2.png)
 
 ---
 
