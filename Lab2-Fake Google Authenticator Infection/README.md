@@ -18,7 +18,6 @@
 
 ## **Description**
 
-![Google Auth image](images/ga.jpg)
 
 This investigation simulates the workflow of a **Security Operations Center (SOC) analyst** responding to a malware incident.  
 
@@ -26,6 +25,7 @@ A user reported downloading a suspicious “Google Authenticator” application,
 
 By the end of the analysis, I was able to piece together the full infection chain — from the initial DNS query, to malicious command-and-control (C2) servers, and finally to the obfuscated payload designed to persist and evade detection.  
 
+![Google Auth image](images/ga.jpg)
 ---
 
 ## **Tools and Technologies Used**
