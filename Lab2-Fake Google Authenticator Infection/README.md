@@ -17,6 +17,9 @@
 ---
 
 ## **Description**
+
+![Google Auth image](images/ga.jpg)
+
 This investigation simulates the workflow of a **Security Operations Center (SOC) analyst** responding to a malware incident.  
 
 A user reported downloading a suspicious “Google Authenticator” application, which matched recent threat intelligence advisories. I received a **packet capture (PCAP)** of the infected machine’s traffic and performed step-by-step analysis in **Wireshark** to confirm the infection, identify compromised infrastructure, and extract indicators of compromise (IOCs).  
